@@ -1,26 +1,35 @@
-
-
 import Image from "next/image";
 import styles from "./page.module.css";
 
 export default function Home() {
   return (
     <>
-      <div className="bg-blue-300 h-[60px] flex items-center justify-between px-4">
+      <div className="bg-gray-200 h-[75px] flex items-center justify-between px-4">
         {/* Left Logo */}
-        <img src="/apollo.jpeg" alt="apollo" className="w-[80px] h-[50px]" />
+        <a href="/">
+          <img src="/logo.png" alt="apollo" className="w-[200px] h-[100px]" style={{ marginBottom: "-80px", marginLeft: "10px" }} />
+        </a>
 
         {/* Navbar Links */}
-        <nav className="flex gap-6 text-blue-900 font-medium text-lg">
-          <a href="#" className="hover:underline">Home</a>
-          <a href="#" className="hover:underline">About Us</a>
-          <a href="#" className="hover:underline">Contact Us</a>
+        <nav style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',  // Or 'space-between' or 'space-evenly'
+          gap: '40px',
+          marginTop: '70px',
+          marginRight: '920px' // Adjust gap value as needed
+        }}
+        >
+          <a href="#" className="hover:underline">PRODUCTS</a>
+          <a href="#" className="hover:underline">ABOUT US</a>
+          <a href="#" className="hover:underline">CONTACT US</a>
         </nav>
 
         {/* Right Logo */}
-        <img src="/malas.png" alt="malas" className="w-[60px] h-[30px]" />
+        {/*<img src="/malas.png" alt="malas" className="w-[60px] h-[30px]" />*/}
       </div>
-      <h1 className="text-center">Product Categories</h1>
+      {/*<h1 className="text-center">Product Categories</h1>*/}
+
     </>
   );
 }
